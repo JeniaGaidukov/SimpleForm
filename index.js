@@ -1,25 +1,8 @@
 "use strict";
 
 function validation(form) {
-  function deleteError(input) {
-    const parent = input.parentNode;
-
-    if (parent.classList.contains("error")) {
-      parent.querySelector(".error-message").remove();
-      parent.classList.remove("error");
-    }
-  }
-
-  function createError(input, text) {
-    const parent = input.parentNode;
-    const errorLabel = document.createElement("label");
-    errorLabel.classList.add("error-message");
-    errorLabel.textContent = text;
-    parent.classList.add("error");
-    parent.append(errorLabel);
-  }
-
   let result = true;
+
   form.querySelectorAll("input").forEach((input) => {
     deleteError(input);
 
@@ -63,6 +46,24 @@ function validation(form) {
     }
   });
   return result;
+}
+
+function deleteError(input) {
+  const parent = input.parentNode;
+
+  if (parent.classList.contains("error")) {
+    parent.querySelector(".error-message").remove();
+    parent.classList.remove("error");
+  }
+}
+
+function createError(input, text) {
+  const parent = input.parentNode;
+  const errorLabel = document.createElement("label");
+  errorLabel.classList.add("error-message");
+  errorLabel.textContent = text;
+  parent.classList.add("error");
+  parent.append(errorLabel);
 }
 
 document.getElementById("form").addEventListener("submit", function (event) {
