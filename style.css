@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #e4defe;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #616060;
+  margin-top: 50px;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.form__title {
+  text-align: center;
+  font-size: 40px;
+  margin: 30px 20px 30px 20px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.from__label {
+  align-self: start;
+  letter-spacing: 0.5px;
+  padding-left: 40px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.form__input {
+  height: 35px;
+  border-radius: 5px;
+  width: 75%;
+  font-size: 18px;
+}
+
+.form__input::placeholder {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.form__input:focus::placeholder {
+  color: #b9b3b3;
+}
+
+.error .form__input {
+  border-color: red;
+}
+
+.error-message {
+  align-self: start;
+  width: 250px;
+  padding-left: 45px;
+  font-size: 12px;
+  display: block;
+  color: red;
+}
+
+.form__input:focus {
+  box-shadow: 0 0 15px #a08fee;
+}
+
+.form__button {
+  width: 50%;
+  height: 40px;
+  margin: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: white;
+  background-color: #7a5cfa;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #5e48c0;
+}
+
+.form__button:active {
+  background-color: #382492;
+}
